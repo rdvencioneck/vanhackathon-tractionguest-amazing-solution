@@ -17,7 +17,6 @@ resource "google_compute_address" "default" {
   region = "${var.region}"
 }
 
-
 # vhast = VanHackathon Amazing Solution for Traction
 resource "kubernetes_service" "vhast" {
   metadata {
