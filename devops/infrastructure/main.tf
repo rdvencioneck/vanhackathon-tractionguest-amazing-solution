@@ -13,7 +13,7 @@ variable "region" {
 }
 
 variable "databasepwd" {
-  default = "P4s_$W0rD9"
+  default = "P4s_W0rD9"
 }
 
 variable "k8s_clustername" {
@@ -39,7 +39,7 @@ resource "google_sql_database_instance" "master" {
 }
 
 resource "google_sql_user" "users" {
-  name     = "admin"
+  name     = "dbadmin"
   instance = "${google_sql_database_instance.master.name}"
   password = "${var.databasepwd}"
 }
