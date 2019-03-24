@@ -1,3 +1,9 @@
+provider "google" {
+  credentials = "${file("./account.json")}"
+  project     = "hallowed-forge-235513"
+  region      = "us-central1"
+}
+
 variable "network_name" {
   default = "vanhackathon-tractionguest"
 }
@@ -45,9 +51,12 @@ resource "google_sql_database" "user_information" {
   collation = "latin1_swedish_ci"
 }
 
+data "google_client_config" "current" {}
+
 resource "google_container_cluster" "gke-cluster" {
   name               = "${var.k8s_clustername}"
   network            = "${var.network_name}"
   region             = "${var.region}"
   initial_node_count = 3
+  enable_legacy_abac = true
 }
