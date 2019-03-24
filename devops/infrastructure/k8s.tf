@@ -33,8 +33,8 @@ resource "kubernetes_service" "vhast" {
 
     port {
       protocol    = "TCP"
-      port        = 80
-      target_port = 80
+      port        = 443
+      target_port = 3000
     }
 
     type             = "LoadBalancer"
@@ -59,8 +59,8 @@ resource "kubernetes_replication_controller" "vhast" {
 
     template {
       container {
-        image = "nginx:latest"
-        name  = "vhast"
+        image = "gcr.io/hallowed-forge-235513/vhast:latest"
+        name  = "vhast2"
       }
     }
   }
