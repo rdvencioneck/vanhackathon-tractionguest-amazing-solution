@@ -13,6 +13,7 @@ class CreateClientsAndVehicles < ActiveRecord::Migration[5.2]
       t.string :model
       t.integer :model_year
       t.string :color
+      t.integer :in_queue
 
       t.timestamps
     end

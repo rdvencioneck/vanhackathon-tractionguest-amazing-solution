@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2019_03_24_162021) do
     t.string "model"
     t.integer "model_year"
     t.string "color"
+    t.integer "in_queue"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

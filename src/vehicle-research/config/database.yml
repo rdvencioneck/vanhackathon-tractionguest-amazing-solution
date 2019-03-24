@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: vehicle-research_production
-  username: vehicle-research
+  database: <%= ENV['VEHICLE-RESEARCH_DATABASE'] %>
+  host:     <%= ENV['VEHICLE-RESEARCH_DATABASE_HOST'] %>
+  username: <%= ENV['VEHICLE-RESEARCH_DATABASE_USERNAME'] %>
   password: <%= ENV['VEHICLE-RESEARCH_DATABASE_PASSWORD'] %>
