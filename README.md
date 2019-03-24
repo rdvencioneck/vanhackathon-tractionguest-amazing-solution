@@ -29,4 +29,4 @@ __HTTP CODE 200 with the Vehicle JSON__
 
 ## Traction Guest
 
-To use that experience in Traction Guest, please refer to the experience __https://account.tractionguest.com/#/Experience/11768__ or the screenshot __experience.jpeg__ in the root of this project 
+To use that experience in Traction Guest, please refer to the experience __https://account.tractionguest.com/#/Experience/11768__ or the screenshot __experience.png__ in the root of this project 
