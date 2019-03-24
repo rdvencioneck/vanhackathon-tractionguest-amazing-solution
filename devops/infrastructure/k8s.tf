@@ -60,7 +60,7 @@ resource "kubernetes_replication_controller" "vhast" {
     template {
       container {
         image = "gcr.io/hallowed-forge-235513/vhast:latest"
-        name  = "vhast2"
+        name  = "vhast3"
       }
     }
   }
